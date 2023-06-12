@@ -1,16 +1,14 @@
-import Head from 'next/head'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import Header from '@/components/Header'
 import { useState } from 'react'
+import Head from 'next/head'
+import Header from '@/components/Header'
 import light from '@/styles/theme/light'
 import dark from '@/styles/theme/dark'
+import MainView from '@/components/MainView'
+import SearchInput from '@/components/SearchInput'
+import CharacterList from '@/components/CharacterList'
 import { ThemeProvider } from 'styled-components'
+import CharacterCard from '@/components/CharacterCard'
 import GlobalStyle from '../styles/global';
-
-
-const inter = Inter({ subsets: ['latin'] })
-
 
 export default function Home() {
   const [theme, setTheme] = useState(light);
@@ -29,9 +27,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header toggleTheme={toggleTheme} />
-      <main className={`${styles.main} ${inter.className}`} >
-        oi
-      </main>
+      <MainView>
+        <SearchInput />
+        <CharacterList>
+          <CharacterCard>1</CharacterCard>
+          <CharacterCard>2</CharacterCard>
+          <CharacterCard>3</CharacterCard>
+          <CharacterCard>4</CharacterCard>
+        </CharacterList>
+      </MainView>
     </ThemeProvider>
   )
 }
