@@ -12,6 +12,7 @@ export const HeaderContainer = styled.header`
     padding: 0 30px;
 
     position: fixed;
+    top: 0px;
 `
 
 export const ThemeSwitcher = styled.div`
