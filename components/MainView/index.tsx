@@ -8,7 +8,7 @@ interface MainViewProps {
 
 const inter = Inter({ subsets: ['latin'] })
 
-function MainView({ children }: MainViewProps) {
+const MainView: React.FC<MainViewProps> = ({ children }) => {
     return (
         <S.MainContainer className={inter.className}>
             {children}

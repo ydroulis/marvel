@@ -4,7 +4,7 @@ import { MagnifyingGlass } from '@phosphor-icons/react';
 import { useTheme } from 'styled-components';
 import * as S from './styles';
 
-function SearchInput() {
+const SearchInput: React.FC = () => {
     const themeContext = useTheme();
 
     return (

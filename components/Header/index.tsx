@@ -12,7 +12,7 @@ interface HeaderProps {
     toggleTheme(): void;
 }
 
-function Header({ toggleTheme }: HeaderProps) {
+const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
     const themeContext = useTheme();
 
     return (

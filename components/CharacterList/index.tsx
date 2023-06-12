@@ -5,7 +5,7 @@ interface CharacterListProps {
     children: React.ReactNode
 }
 
-function CharacterList({ children }: CharacterListProps) {
+const CharacterList: React.FC<CharacterListProps> = ({ children }) => {
     return (
         <S.ListContainer>
             {children}
