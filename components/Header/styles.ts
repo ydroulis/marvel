@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const HeaderContainer = styled.header`
     width: 100%;
     height: 100px;
-    background: ${props => props.theme.colors.primary};
+    background: #851114;
     color: #fff;
     display: flex;
     align-items: center;
