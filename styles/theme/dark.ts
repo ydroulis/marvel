@@ -6,6 +6,6 @@ export default {
         secondary: '#152031',
         switch: '#7B7C81',
 
-        text: '#333'
+        text: '#C5C8CD'
     }
 }
