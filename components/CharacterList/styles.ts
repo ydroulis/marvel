@@ -10,7 +10,7 @@ export const ListContainer = styled.ul`
 
     position: absolute;
     left: 0px;
-    top: 180px;
+    top: 200px;
 
     @media (min-width: 620px) {
         max-width: 550px;
