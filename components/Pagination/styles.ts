@@ -28,11 +28,23 @@ export const PaginationContainer = styled.ul`
 
         border: none;
         border-radius: 8px;
+
+        transition: all .1s linear;
+
+        cursor: pointer;
+
+        &:hover{
+            opacity: 0.7;
+        }
     }
 
     .paginationActive{
         background: ${props => props.theme.colors.active};
 
         font-weight: bold;
+
+        &:hover{
+            opacity: 1;
+        }
     }    
 `
