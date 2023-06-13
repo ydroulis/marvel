@@ -8,6 +8,7 @@ import { getCharacters } from '@/api/character';
 import CharacterList from '../CharacterList';
 import * as S from './styles';
 import Pagination from '../Pagination';
+import Loading from '../Loading';
 
 interface ICharacter {
     name: string;
@@ -50,28 +51,24 @@ const MainView: React.FC = () => {
         }
     }
 
+    // if (characterList && !characterList.length) {
+    //     return <Loading message='Buscando heróis... Aguarde um momento' />
+    // }
+
     return (
         <S.MainContainer className={inter.className}>
-            <h1>A maior biblioteca dos maiorer personagens do multiverso</h1>
+            <h1>A maior biblioteca dos maiores personagens do multiverso</h1>
             <SearchInput onChange={handleSearch} />
             <CharacterList>
-                {isLoading ? (
-                    <div>Carregando...</div>
+                {characterList && !characterList.length ? (
+                    <Loading message='Buscando heróis... Aguarde um momento' />
                 ) : (
                     <>
-                        {filteredCharacter && filteredCharacter.length > 0 ?
-                            <>
-                                {filteredCharacter.map((character: ICharacter, i: number) => {
-                                    return <CharacterCard character={character && character} />
-                                })}
-                            </>
-                            :
-                            <>
-                                {characterList && characterList.map((character: ICharacter, i: number) => {
-                                    return <CharacterCard key={i} character={character && character} />
-                                })}
-                            </>
-                        }
+
+                        {characterList && characterList.map((character: ICharacter, i: number) => {
+                            return <CharacterCard key={i} character={character && character} />
+                        })}
+
                     </>
                 )}
             </CharacterList>
