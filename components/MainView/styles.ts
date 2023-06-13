@@ -12,4 +12,20 @@ export const MainContainer = styled.main`
 
     position: relative;
     margin-bottom: 60px;
+
+    @media (min-width: 450px) {
+        height: 1430px;
+    }
+
+    @media (min-width: 590px) {
+        height: 1680px;
+    }
+
+    @media (min-width: 700px) {
+        height: 930px;
+    }
+
+    @media (min-width: 900px) {
+        height: 800px;
+    }
 `
