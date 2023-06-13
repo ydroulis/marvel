@@ -1,21 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import * as S from './styles';
-import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { ICharacter } from '../../types/character';
+import CharacterContext from '@/context/CharacterContext';
+
 
 interface CharacterCardProps {
-    character: {
-        name: string;
-        thumbnail: {
-            path: string;
-            extension: string
-        }
-    }
+    character: ICharacter
 }
 
 const CharacterCard: React.FC<CharacterCardProps> = ({ character }) => {
+    const router = useRouter()
+    const { setCharacter } = useContext(CharacterContext);
+
+    const handleRedirect = () => {
+        setCharacter(character);
+        router.push('/character');
+    }
+
     return (
-        <S.CardContainer>
-            <img src={`${character.thumbnail.path}/standard_fantastic.${character.thumbnail.extension}`} alt='spiderman' />
+        <S.CardContainer onClick={() => handleRedirect()}>
+            <img
+                src={`${character.thumbnail.path}/standard_fantastic.${character.thumbnail.extension}`}
+                alt={character.name} />
             <S.CharacterName>
                 <p>{character.name}</p>
             </S.CharacterName>

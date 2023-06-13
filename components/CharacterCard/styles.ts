@@ -14,6 +14,14 @@ export const CardContainer = styled.li`
 
     overflow: hidden;
 
+    cursor: pointer;
+
+    transition: all .3s linear;
+
+    &:hover{
+        transform: scale(1.05);
+    }
+
     @media (min-width: 450px) {
         width: 195px;
         height: 195px;
