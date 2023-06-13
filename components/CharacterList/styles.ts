@@ -8,5 +8,7 @@ export const ListContainer = styled.ul`
     gap: 10px;
     justify-content: center;
 
-    margin-top: 20px;
+    position: absolute;
+    left: 0px;
+    top: 250px;
 `
