@@ -17,4 +17,10 @@ export const LoadingContainer = styled.div`
     span{
         color: ${props => props.theme.colors.primary}; 
     }
+
+    @media (min-width: 900px) {
+        width: 500px;
+
+        font-size: 20px;
+    }
 `
