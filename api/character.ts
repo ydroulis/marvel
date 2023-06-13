@@ -10,9 +10,13 @@ const time = Number(new Date());
 
 const hash = md5(time + privateKey + publicKey);
 
-export const getCharacters = async (offset?: number, limit?: number) => {
+export const getCharacters = async (offset: number, limit: number, nameStartsWith?: string) => {
     try {
-        const response = await axios.get(`${baseURL}characters?ts=${time}&apikey=${publicKey}&hash=${hash}&limit=${10}&offset=${10}`);
+        const response = await axios.get(`${baseURL}characters?ts=${time}&apikey=${publicKey}&hash=${hash}&limit=${limit}&offset=${offset}`, {
+            params: {
+                nameStartsWith: nameStartsWith ? nameStartsWith : null
+            }
+        });
 
         if (!response) {
             throw new Error("Erro ao obter dados");
