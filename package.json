@@ -19,6 +19,7 @@
     "@types/react": "18.2.11",
     "@types/react-dom": "18.2.4",
     "axios": "^1.4.0",
+    "date-fns": "^2.30.0",
     "dotenv": "^16.1.4",
     "lodash": "^4.17.21",
     "md5": "^2.3.0",
