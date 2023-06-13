@@ -13,10 +13,16 @@ export const HeaderContainer = styled.header`
 
     position: fixed;
     top: 0px;
+
+    z-index: 999;
 `
 
 export const ThemeSwitcher = styled.div`
     display: flex;
     align-items: center;
     gap: 5px;
+
+    div{
+        cursor: pointer;
+    }
 `
