@@ -9,8 +9,8 @@ interface LoadingProps {
 const Loading: React.FC<LoadingProps> = ({ message }) => {
     return (
         <S.LoadingContainer>
-            <CircularProgress />
             {message}
+            <CircularProgress />
         </S.LoadingContainer>
     );
 }

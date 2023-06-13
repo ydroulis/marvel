@@ -61,7 +61,7 @@ const MainView: React.FC = () => {
             <SearchInput onChange={handleSearch} />
             <CharacterList>
                 {characterList && !characterList.length ? (
-                    <Loading message='Buscando heróis... Aguarde um momento' />
+                    <Loading message='Buscando heróis... Aguarde um momento. Caso esteja demorando muito certifique-se de que escreveu corretamente.' />
                 ) : (
                     <>
 
