@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CardContainer = styled.li`
     width: 150px;
-    height: 100px;
+    height: 150px;
 
     list-style: none;
 
@@ -16,6 +16,7 @@ export const CardContainer = styled.li`
 
     img{
         width: 100%;
+        height: 100%;
     }
 `
 
@@ -25,7 +26,7 @@ export const CharacterName = styled.div`
     align-items: center;
 
     width: 100%;
-    height: 28px;
+    height: 34px;
 
     position: absolute;
     bottom: 0px;
@@ -33,4 +34,8 @@ export const CharacterName = styled.div`
     background: #851114;
 
     color: #C5C8CD;
+
+    p{
+        text-align: center;
+    }
 `

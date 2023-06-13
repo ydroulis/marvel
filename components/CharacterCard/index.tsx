@@ -2,12 +2,22 @@ import React from 'react';
 import * as S from './styles';
 import Image from 'next/image';
 
-const CharacterCard: React.FC = () => {
+interface CharacterCardProps {
+    character: {
+        name: string;
+        thumbnail: {
+            path: string;
+            extension: string
+        }
+    }
+}
+
+const CharacterCard: React.FC<CharacterCardProps> = ({ character }) => {
     return (
         <S.CardContainer>
-            <Image src='/images/spiderman.png' width={100} height={100} alt='spiderman' />
+            <img src={`${character.thumbnail.path}/standard_fantastic.${character.thumbnail.extension}`} alt='spiderman' />
             <S.CharacterName>
-                <p>Spiderman</p>
+                <p>{character.name}</p>
             </S.CharacterName>
         </S.CardContainer>
     );
