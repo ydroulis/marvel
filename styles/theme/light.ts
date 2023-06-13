@@ -6,6 +6,7 @@ export default {
         secondary: '#C5C8CD',
 
         icons: '#7B7C81',
+        active: '#152031',
 
         text: '#333'
     }
