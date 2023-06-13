@@ -25,5 +25,17 @@ export const getCharacters = async (offset: number, limit: number, nameStartsWit
     } catch (error) {
         console.error(error);
     }
+}
 
+export const getCharacterComic = async (id: number) => {
+    try {
+        const response = await axios.get(`${baseURL}characters/${id}/comics?ts=${time}&apikey=${publicKey}&hash=${hash}`);
+
+        if (!response) {
+            throw new Error("Erro ao obter dados");
+        }
+        return await response.data.data;
+    } catch (error) {
+        console.error(error);
+    }
 }
