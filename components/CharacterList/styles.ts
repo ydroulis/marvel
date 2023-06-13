@@ -10,5 +10,5 @@ export const ListContainer = styled.ul`
 
     position: absolute;
     left: 0px;
-    top: 250px;
+    top: 100px;
 `
