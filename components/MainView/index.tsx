@@ -52,8 +52,8 @@ const MainView: React.FC = () => {
 
     return (
         <S.MainContainer className={inter.className}>
+            <h1>A maior biblioteca dos maiorer personagens do multiverso</h1>
             <SearchInput onChange={handleSearch} />
-            <Tags filteredCharacter={filteredCharacter} setFilteredCharacter={setFilteredCharacter} />
             <CharacterList>
                 {isLoading ? (
                     <div>Carregando...</div>

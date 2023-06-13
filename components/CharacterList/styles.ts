@@ -10,7 +10,7 @@ export const ListContainer = styled.ul`
 
     position: absolute;
     left: 0px;
-    top: 100px;
+    top: 180px;
 
     @media (min-width: 620px) {
         max-width: 550px;
@@ -19,6 +19,13 @@ export const ListContainer = styled.ul`
         transform: translateX(-50%);
     }
 
+    @media (min-width: 590px) {
+        top: 200px;
+    }
+
+    @media (min-width: 700px) {
+        top: 220px;
+    }
 
      @media (min-width: 830px) {
         max-width: 650px;
@@ -26,5 +33,8 @@ export const ListContainer = styled.ul`
 
     @media (min-width: 900px) {
         max-width: 800px;
+
+        top: 250px;
+
     }
 `
