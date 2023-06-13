@@ -14,11 +14,11 @@ App that contains a collection of Marvel characters and some relevant informatio
 
 # Usage
 
-In the main page, it will apper a list of character cards, so you can click on them and see the character page with some info about the character and his appearance at the comics.
+In the main page, it will appear a list of character cards, so you can click on them and see the character page with some info about the character and his appearance at the comics.
 
-In the main page, you can also search for any character by typing the name at the input fild and the app automatically fill filter the results as you continue to type. It is necessary to type at least 3 letters. Once the results start to appear you can click in any character character to see the character page
+In the main page, you can also search for any character by typing the name at the input field and the app will automatically filter the results as you continue to type. It is necessary to type at least 3 letters. Once the results start to appear, you can click in any character to see the his page.
 
-It is possible to navigate using the pagination buttuns at thr bottom of the main page.
+It is possible to navigate using the pagination buttons at the bottom of the main page.
 
 At the header of the page you can use the switch button to change into a dark theme or light theme.
 
@@ -42,7 +42,7 @@ npm start
 yarn start
 ```
 
-Or run build comanto to build the app for pruduction
+Or run build comand to build the app for pruduction
 
 ```bash
 npm next build
