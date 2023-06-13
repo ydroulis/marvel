@@ -31,6 +31,8 @@ export const PaginationContainer = styled.ul`
     }
 
     .paginationActive{
-        
+        background: ${props => props.theme.colors.active};
+
+        font-weight: bold;
     }    
 `
