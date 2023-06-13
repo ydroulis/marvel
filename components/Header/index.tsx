@@ -1,25 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import Switch from 'react-switch';
-import { useTheme } from 'styled-components';
 import { Moon, Sun } from '@phosphor-icons/react';
+import light from '@/styles/theme/light';
+import dark from '@/styles/theme/dark';
 import * as S from './styles';
+import ThemeHandlerContext from '../../context/ThemeHandlerContext';
 
-interface HeaderProps {
-    toggleTheme(): void;
-}
+const Header: React.FC = () => {
+    const { theme, setTheme } = useContext(ThemeHandlerContext);
 
-const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
-    const themeContext = useTheme();
+    const toggleTheme = () => {
+        setTheme(theme.title === 'light' ? dark : light);
+    }
 
     return (
         <S.HeaderContainer>
-            <Image src='/images/Logo.png' width={105} height={45} alt='Marvel logo' />
-            <S.ThemeSwitcher>
+            <Link href={'/'}>
+                <Image src='/images/Logo.png' width={105} height={45} alt='Marvel logo' />
+            </Link>            <S.ThemeSwitcher>
                 <Sun size={32} />
                 <Switch
                     onChange={toggleTheme}
-                    checked={themeContext?.title === 'dark'}
+                    checked={theme.title === 'dark'}
                     checkedIcon={false}
                     uncheckedIcon={false}
                     height={20}
