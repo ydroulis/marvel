@@ -1,46 +1,33 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Inter } from 'next/font/google'
 import SearchInput from '../SearchInput';
-import Tags from '../Tags';
 import CharacterCard from '../CharacterCard';
-import { useQuery } from 'react-query';
 import { getCharacters } from '@/api/character';
 import CharacterList from '../CharacterList';
-import * as S from './styles';
 import Pagination from '../Pagination';
 import Loading from '../Loading';
-
-interface ICharacter {
-    name: string;
-    thumbnail: {
-        path: string;
-        extension: string
-    }
-}
+import { ICharacter } from '@/types/character';
+import * as S from './styles';
 
 const limit = 12;
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 const MainView: React.FC = () => {
     const [characterList, setCharacterList] = useState<ICharacter[]>();
     const [totalCharacter, setTotalCharacter] = useState(0);
-    const [filteredCharacter, setFilteredCharacter] = useState<ICharacter[]>();
     const [offset, setOffset] = useState(0);
-    const [nameStartsWith, setNameStartsWith] = useState('')
-    const [isLoading, setIsLoading] = useState(false);
+    const [nameStartsWith, setNameStartsWith] = useState('');
 
     useEffect(() => {
         const loadCharacters = async () => {
-            setIsLoading(true)
             const response = await getCharacters(offset, limit, nameStartsWith);
             setTotalCharacter(response.total)
             setCharacterList(response.results);
         }
 
         loadCharacters();
-        setIsLoading(false);
-    }, [offset, nameStartsWith])
+    }, [offset, nameStartsWith]);
 
     function handleSearch(evt: ChangeEvent<HTMLInputElement>) {
         const { value } = evt.target
@@ -50,10 +37,6 @@ const MainView: React.FC = () => {
             setNameStartsWith('')
         }
     }
-
-    // if (characterList && !characterList.length) {
-    //     return <Loading message='Buscando heróis... Aguarde um momento' />
-    // }
 
     return (
         <S.MainContainer className={inter.className}>
