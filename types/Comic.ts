@@ -4,6 +4,6 @@ export interface IComic {
     dates: { type: string, date: string }[],
     thumbnail: {
         path: string,
-        extension: string
+        extension: string,
     }
 }
