@@ -6,7 +6,7 @@ import { getCharacters } from '@/api/character';
 import CharacterList from '../CharacterList';
 import Pagination from '../Pagination';
 import Loading from '../Loading';
-import { ICharacter } from '@/types/character';
+import { ICharacter } from '@/types/Character';
 import * as S from './styles';
 
 const limit = 12;

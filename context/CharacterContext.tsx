@@ -1,4 +1,4 @@
-import { ICharacter } from "@/types/character";
+import { ICharacter } from "@/types/Character";
 import { Dispatch, SetStateAction, createContext } from "react";
 
 

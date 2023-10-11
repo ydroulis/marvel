@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import * as S from './styles';
 import { useRouter } from 'next/router';
-import { ICharacter } from '../../types/character';
+import { ICharacter } from '../../types/Character';
 import CharacterContext from '@/context/CharacterContext';
 
 

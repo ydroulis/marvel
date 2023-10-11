@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './styles';
 import { BookOpen, YoutubeLogo } from '@phosphor-icons/react';
-import { ICharacter } from '@/types/character';
+import { ICharacter } from '@/types/Character';
 import { IComic } from '@/types/Comic';
 import { format, parseISO } from 'date-fns';
 import { ptBR } from 'date-fns/locale';

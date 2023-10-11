@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import ThemeHandlerContext from '../context/ThemeHandlerContext';
 import { DefaultTheme } from 'styled-components/dist/types';
 import CharacterContext from '@/context/CharacterContext';
-import { ICharacter } from '@/types/character';
+import { ICharacter } from '@/types/Character';
 
 const queryClient = new QueryClient();
 
