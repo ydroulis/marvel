@@ -1,6 +1,7 @@
 # marvel
 
 App that contains a collection of Marvel characters and some relevant informations.
+To visit production version: https://marvelcharacterlib.netlify.app/
 
 # What is used
 
