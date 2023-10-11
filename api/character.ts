@@ -1,7 +1,7 @@
 import md5 from 'md5';
 import axios from 'axios'
 
-const baseURL = 'http://gateway.marvel.com/v1/public/';
+const baseURL = 'https://gateway.marvel.com/v1/public/';
 
 const publicKey = 'b076a24991bdc2b2840977bbe989220d';
 const privateKey = '1d89de20b654dd5da7cdd54dd3922305860c50aa';
